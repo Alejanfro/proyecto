@@ -1,0 +1,246 @@
+public class Alumno implements Calificaciones {
+
+    /**
+     * Clase interna de alumno en la cual usaremos asignatura y calificacion
+     */
+    private class Nota {
+
+        private String asignatura;//Solo puede ser bbdd y programacion
+
+        private byte calificacion;//calificacion valor entre 0 - 10
+
+        Nota(String a, byte c) {
+            asignatura = a;
+            calificacion = c;
+        }
+
+        Nota() {
+
+        }
+
+        /**
+         * Getter de asignatura
+         *
+         * @return la asignatura
+         */
+        public String getAsignatura() {
+            return asignatura;
+        }
+
+        /**
+         * Getter de calificación
+         *
+         * @return la calificación
+         */
+        public byte getCalificacion() {
+            return calificacion;
+
+        }
+
+        /**
+         * Setter de asignatura
+         *
+         * @param asignatura asignatura a cambiar
+         */
+        public void setAsignatura(String asignatura) {
+            this.asignatura = asignatura;
+        }
+
+        /**
+         * Setter de calificación
+         *
+         * @param calificacion calificación a cambiar
+         */
+        public void setCalificacion(byte calificacion) {
+            this.calificacion = calificacion;
+        }
+
+    }
+
+    /*
+    
+     */
+    private String nombre;//Nombre de la persona
+    private int edad;//Edad de la persona entre 18 y 99
+    private Nota notas[];//Array de objeto de notas
+
+    /**
+     * Contructor Alumnos con todas sus variables
+     *
+     * @param n nombre del alumno
+     * @param e edad del alumno
+     * @param no array[] notas de alumno
+     */
+    public Alumno(String n, int e, Nota no[]) {
+        this.nombre = n;
+        this.edad = e;
+        this.notas = no;
+        no = notas; //No me deja instanciarlo así probar primero con su propio constructor privado
+
+        // this.notas=new Nota(asignatura,calificacion);
+    }
+
+    /**
+     * Constructo Alumno vacio
+     */
+    public Alumno() {
+
+    }
+
+    /**
+     * Getter de nombre
+     *
+     * @return el nombre
+     */
+    public String getNombre() {
+        return nombre;
+    }
+
+    /**
+     * getter de edad
+     *
+     * @return edad
+     */
+    public int getEdad() {
+        return edad;
+    }
+
+    /**
+     * Getter de notas
+     *
+     * @return
+     */
+    public Nota[] getNotas() {
+        return notas;
+    }
+
+    /**
+     * Setter de nombre
+     *
+     * @param nombre nombre a cambiar
+     */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    /**
+     * Setter de edad
+     *
+     * @param edad edad de la persona debe de ser de 18 a 99 Gestión de
+     * errores--> nos devolverá 0 en caso de estar bien y -1 si está mal
+     */
+    public byte setEdad(int edad) {
+        this.edad = edad;
+        if (edad >= 18 && edad <= 99) {
+            return 0;
+        }
+        return -1;
+
+    }
+
+    /**
+     * Metodo para gestion de errores de edad 0 esta correcto -1 esta mal
+     *
+     * @param ed edad del alumno
+     * @return numero del error
+     */
+    public boolean ajustarEdad(int ed) {
+        if (ed > 0 && ed < 99) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     *Comprobamos si las notas son programacion o bbdd y si no lo son le ponenmos a la asignatura un ""
+     * @param notas
+     */
+    public void setNotas(Nota[] notas) {
+        this.notas = notas;
+        for (int i = 0; i < notas.length; i++) {
+            if (notas[i].asignatura.equalsIgnoreCase("programacion") || notas[i].asignatura.equalsIgnoreCase("bbdd")) {
+                notas[i].asignatura = notas[i].asignatura.toLowerCase();
+            } else {
+                notas[i].asignatura = "";
+            }
+
+        }
+
+    }
+
+    /**
+     * Establecemos las notas es decir por medio de dos arrays pedidos en el  main y se lo cargamos al objeto nota
+     * @param no objeto Nota a la cual vamos a asignar 
+     * @param asignaturas arrays de asignaturas 
+     * @param calificacion  arrays de calificaiones
+     */
+    public void establecerNotas(Nota[] no, String[] asignaturas, byte[] calificacion) {
+
+        for (int i = 0; i < no.length; i++) {
+            Nota objeto = new Nota();
+            objeto.setAsignatura(asignaturas[i]);
+            objeto.setCalificacion(calificacion[i]);
+            this.notas[i] = objeto;
+        }
+        /* for (int i = 0; i <objeto.length; i++) {
+              
+              objeto[i].asignatura=asignaturas[i];
+              objeto[i].calificacion=calis[i];
+          }*/
+        //  this.notas=objeto;
+    }
+
+    public void establecerCantidadNotas(byte cantidad) {
+        this.notas = new Nota[cantidad];
+    }
+
+    public void ajustarNotas() {
+        byte cantidad = 0;
+        for (int i = 0; i < this.notas.length; i++) {
+            if (notas[i].asignatura.equalsIgnoreCase("programacion")
+                    || notas[i].asignatura.equalsIgnoreCase("bbdd")) {
+                cantidad++;
+            }
+        }
+        Nota[] notaAjustada = new Nota[cantidad];
+        byte contador = 0;
+        for (int i = 0; i < notas.length; i++) {
+            if (notas[i].asignatura.equalsIgnoreCase("programacion")
+                    || notas[i].asignatura.equalsIgnoreCase("bbdd")) {
+                notaAjustada[contador] = notas[i];
+                contador++;
+            }
+        }
+        this.notas = notaAjustada;
+    }
+
+    @Override
+    public String toString() {
+        String datosAsignatura = "";
+        String datosCalificaciones = "";
+        for (int i = 0; i < this.getNotas().length; i++) {
+            datosAsignatura += notas[i].asignatura + " ";
+            datosCalificaciones += notas[i].calificacion + " ";
+        }
+        return "Alumno{" + "nombre=" + nombre + ", edad=" + edad + ", Nombre de la nota=" + datosAsignatura
+                + "Calificacion" + datosCalificaciones + '}';
+    }
+
+    @Override
+    public float calcularNotas(String asignaturas) {
+
+        float media = 0;
+
+        byte indice = 0;
+        for (int i = 0; i < this.notas.length; i++) {
+            if (this.notas[i].getAsignatura().equalsIgnoreCase(asignaturas)) {
+                media = media + this.notas[i].getCalificacion();//total la suma de la calificacion por ejemplo de bbdd
+                indice++;//cuantas hay por ejemplo de bbdd
+            }
+        }
+        media = media / indice;
+        return media;
+
+    }
+
+}
