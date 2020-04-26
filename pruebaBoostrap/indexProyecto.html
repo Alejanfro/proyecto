@@ -7,8 +7,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <link rel="stylesheet" type="text/css" href="./estilos.css">
-
-
+<!-- IMPORTAMOS los css de ICONOS EN LA CARPETA ICONOS/css-->
+<link rel="stylesheet" type="text/css" href="./css/all.min.css">
 
 
 
@@ -59,9 +59,20 @@
 
 
 		<div class="color1 col-xs-12 col-sm-2 col-md-3">
-			<h2>Aside</h2>
+			<h3>Siguenos!!!</h2>
 			<p>
-			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.	
+			<span class=" Facebook fab fa-facebook-square"></span> Facebook:
+			<a href="#">Facebook</a>
+			<br>
+		<span class=" twitter fab fa-twitter-square"></span> Twitter:
+			<a href="#">Twitter</a>
+			<br>
+			<span class="instragram fab fa-instagram-square"></span> Instragram:
+			<a href="#">Instragram</a>
+			<br>
+			<span class="youtube  fab fa-youtube-square"></span> Youtube:
+			<a href="#">Youtube</a>
+
 			</p>
 		</div>
 <div class="clearfix visible-sm-block"></div>
@@ -76,18 +87,43 @@
 </div>
 
 	<div class=" colorformulario">
-		<h3>Formulario</h3>
-		<p>
-	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-</p>
-<p>
-	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-</p>
-<br>
-	<button class="btn btn-primary">nuestro primer boton</button>
+
+		<br>
+		<form action="" class="formulario">
+			<fieldset><!--si ponemos disabled se desabilita todo siempre y cuando los ambitos se lleven hasta el final -->
+			<div class="form-group has-success"><!--Para validacion de errores se usa has-succes, debe un <label> con la clase control-label -->
+
+			<label for="nombre" class="control-label">Nombre:</label>			
+			<input type required="text" class="form-control" id="nombre" placeholder="Nombre">
+			<br>
+				<div class="input-group">
+					<label class="sr-only" for="correo">Correo: </label>
+					<div class="input-group-addon">@</div>
+					<input class="form-control" id="correo" type="email" placeholder="Correo" required>
+				</div>
+				<br>
+				<div class="form-group">
+					<label for="mensaje">Mensaje</label>
+					<textarea style=" height: 30%; " class="form-control" id="" placeholder="Ecribe tu mensaje"></textarea>
+				</div>
+
+			<label>
+				<input type="checkbox">	Recuerdame <!--Lo podemos desabilitar con disabled-->
+			</label>
+				
+			</div>
+			</fieldset>
+			<br>
+			<div style="padding-left: 50%">
+				<a class="botton">Enviar</a>
+			</div>
+				<div style="padding-top: 3%"></div>	
+				
+		</form>
 
 
-	 </div>
+
+</div>
 
 	
 
@@ -103,6 +139,8 @@
 	<footer>Copyright TropicMania</footer>
 </div>
 
+<!--Importacion iconos.js-->
+<script type="text/javascript" src="./iconos/js/all.min.js"></script>
 <!-- Script de jquery.js y bootstrap.js  -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
