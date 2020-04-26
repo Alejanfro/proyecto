@@ -84,3 +84,20 @@ img {
    width: 99%;
     
 }
+
+
+.facebook {
+    font-size: 200%;
+    color:  #0000fe;
+}
+
+.twitter {
+    font-size: 200%;
+    color: #00fe0c;
+}
+
+
+.youtube {
+    font-size: 200%;
+    color:  #fe0000 ;
+}
