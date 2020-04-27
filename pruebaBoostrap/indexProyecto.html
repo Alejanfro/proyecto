@@ -4,11 +4,11 @@
 <head>
 
 	<!-- Latest compiled and minified CSS  -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<link rel="stylesheet" type="text/css" href="./estilos.css">
+	<link rel="stylesheet" type="text/css" href="./estilos.css">
 <!-- IMPORTAMOS los css de ICONOS EN LA CARPETA ICONOS/css-->
-<link rel="stylesheet" type="text/css" href="./css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/all.min.css">
 
 
 
@@ -18,20 +18,23 @@
 
 
 <body  class="site">
+
 	<div class="separadorBody"></div>
 <div class="container">
+
 	<header>
 	
-		<h1 style="text-align: center;">TROPICMANIA</h1>
+		<h1 style="text-align: left;">TropicMania</h1>
 
-	<img class="logo" src="./maple.jpg">
+	<img class="logo" src="./logoContacto.jpg">
 	</div>
 	
 
 	</header>
+
 <div class="separadorContainer"></div><!--Sirver para serparar los container por medio de padding-->
 
-
+<!--Cuerpo secundario-->
 <div class="container"> 
 <section class="row"><!--1º Fila--> <!--12 si es modo movil, 2 si es pequeño y 3 para media o mas-->
 		<div  class="color1 columnaImagen col-xs-12 col-sm-2 col-md-3"><!--1º Columna-->
@@ -53,18 +56,18 @@
 		una trayectoria impecable.</p>
 		<p><b>Teléfono: </b>+34 757-47-59-06</p>
 		<p><b>Correo electrónico: </b>tropicale@tropicmania.com</p>
-		</div>
+	</div>
 
 		
 
 
-		<div class="color1 col-xs-12 col-sm-2 col-md-3">
-			<h3>Siguenos!!!</h2>
+		<div class="color1 col-xs-12 col-sm-2 col-md-3"><!--3º Columna-->
+			<h3>Siguenos!!!</h3>
 			<p>
 			<span class=" Facebook fab fa-facebook-square"></span> Facebook:
 			<a href="#">Facebook</a>
 			<br>
-		<span class=" twitter fab fa-twitter-square"></span> Twitter:
+			<span class=" twitter fab fa-twitter-square"></span> Twitter:
 			<a href="#">Twitter</a>
 			<br>
 			<span class="instragram fab fa-instagram-square"></span> Instragram:
@@ -74,37 +77,43 @@
 			<a href="#">Youtube</a>
 
 			</p>
+			<br>
+			<iframe width="101%" height="35%" src="https://www.youtube.com/embed/6IF7JE0bpCE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			Pez Disco!!!
 		</div>
-<div class="clearfix visible-sm-block"></div>
+	<div class="clearfix visible-sm-block"></div>
 		
 
 
 
 </section>
-<div class="row"><!--2º Fila-->
-
-
-</div>
-
+<br>
+<br>
 	<div class=" colorformulario">
 
 		<br>
 		<form action="" class="formulario">
 			<fieldset><!--si ponemos disabled se desabilita todo siempre y cuando los ambitos se lleven hasta el final -->
-			<div class="form-group has-success"><!--Para validacion de errores se usa has-succes, debe un <label> con la clase control-label -->
-
+			<div class="form-group"><!--Para validacion de errores se usa has-succes, debe un <label> con la clase control-label -->
+		<div class="has-success">
 			<label for="nombre" class="control-label">Nombre:</label>			
-			<input type required="text" class="form-control" id="nombre" placeholder="Nombre">
+			<input style="width: 60%" type required="text" class="form-control" id="nombre" placeholder="Nombre">
+		</div>
 			<br>
-				<div class="input-group">
+		<div class="has-warning"> 
+				<label for="correo" class="control-label ">Correo:</label>	
+				<div class="input-group ">
+			
 					<label class="sr-only" for="correo">Correo: </label>
+
 					<div class="input-group-addon">@</div>
-					<input class="form-control" id="correo" type="email" placeholder="Correo" required>
-				</div>
+					<input style="width: 45%" class="form-control" id="correo" type="email" placeholder="Correo" required>
+				</div	>
+			</div>
 				<br>
 				<div class="form-group">
 					<label for="mensaje">Mensaje</label>
-					<textarea style=" height: 30%; " class="form-control" id="" placeholder="Ecribe tu mensaje"></textarea>
+					<textarea style=" line-height: 440% " class="form-control" id="" placeholder="Ecribe tu mensaje"></textarea>
 				</div>
 
 			<label>
@@ -135,10 +144,17 @@
 
 </div><!--Div de container-->
 <div class="separadorContainer"></div>
-<div class="container">
-	<footer>Copyright TropicMania</footer>
-</div>
+<div class="container pieFondo">
+	<footer >
+		
 
+		<span class="copyright fas fa-copyright"></span> Copyright TropicMania 1970-2020
+		
+			
+	</footer>
+
+
+</div>
 <!--Importacion iconos.js-->
 <script type="text/javascript" src="./iconos/js/all.min.js"></script>
 <!-- Script de jquery.js y bootstrap.js  -->
