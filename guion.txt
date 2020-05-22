@@ -1,0 +1,144 @@
+
+	///////////////	PRESENTACION ///////////////
+
+
+Buenas dias soy Alejandro Rios, voy a hacer una presentacion de la pagina web realizada para la evaluacion del tercer trimestre, del primer año de desarrollo de aplicaciones multiplataformas para las asignaturas de entorno y desarrollo, lenguaje de marcas y sistemas informaticos, realizada en colaboracion con Nicolas Fernandez.
+
+
+	///////////////	INTRODUCCION  XAMPP ///////////////
+
+Para la creacion del proyecto hemos utilizado xampp que es un servidor independiente de plataforma de código libre. Tiene la facilidad que te permite instalar de forma sencilla Apache en tu propio ordenador, sin importar tu sistema operativo 
+A Apache le hemos asignado el puerto 80
+XAMPP incluye además servidores de bases de datos como MySQL, a este le hemos asignado el puerto 3306
+
+
+	///////////////	JOOMLA HOME ///////////////
+
+Explicacion sobre configuracion del pns tropicmania.com?????????????????????????????????????????
+
+Nuestra web esta enfocada para aficionados a los acuarios acuarios, hemos intentado q todas la paginas que componen la web compartan el mismo diseño.
+Vamos a empezar por la pagina principal de joomla, compuesta por un encabezado con el nombre de la web, le sigue una imagen de acuario, el menu y algunos articulos de interes y para finalizar el pie de pagina que contiene el copyright. 
+Hemos usado la plantilla de joomla por defecto y le hemos realizados algunas modificaciones:
+Agrandar el fondo, cambiar a gris el cuerpo, mayor tamaño de los parrafo asi como un tono azulado para las fuentes.
+
+--para mostrar como hemos cambiado y diseñado la pagina entramos en el modo administrador en muestro css--
+
+*extensiones plantillas, seleciono mi plantilla definitiva y entramos en el css, donde he creado un archivo llamado user.css en la carpeta css que contiene *todas las modificaciones.
+
+Podemos observar la clase .container donde se ha modificado el color a gris claro y el ancho.
+tambien el fotter.container ........
+
+
+	///////////////	JOOMLA TEMA ///////////////
+
+Nuestro pagina tema se compone de varios articulos, es totalmente responsive, joomla incorpora un editor para la creacion y la modificacion de articulos
+insertatr imagenes, modificar parrafo negrita subrrallados
+se puede poner la categoria, el estado 
+Tambien esta parte incluye la gestion de contenidos:	publicar, despublicar, destacado, borrar y las herramientas de busqueda
+
+
+	/////////////// CONTACTO ///////////////
+En contacto:
+lo primero que apreciamos es el header o cabecera con el nombre de la pagina seguida de una imagen y el menu, tiene una separacion con el cuerpo principal.
+El cuerpo principal esta compuesto por 2 secciones o filas que a su vez tiene dos columnas cada una.
+Finalmente el pie de pagina tambien separado conforme a la estetica que hemos seguido en toda la web
+
+--hacer responsive modo movil y mostramos--
+
+Entramos en el codigo:
+El archivo index. html es la página principal del dominio al cual se accede desde Internet
+HTML que como sabeis no es un lenguaje de programación; es un lenguaje de marcado que define la estructura del contenido
+
+Empezamos con las importaciones:
+Hemos importado el boostrap para realizar el responsive en la pagina, tambien importamos icono... ademas de estilos propios
+Este es un menu sanwish que parte con un formato horizontal. 
+--Mostrar css--
+Para realizar el menu con formato vertical (modo movil) usamos el arroba media a partir de unos pixeles, los estilos pasan a ser estos(cambio de fila a columna)
+
+Pasamos al cuerpo principal:
+Como dijimos anteriormente el nucleo esta dividido en dos filas con dos columnas, la primera fila <section class="row"> con dos columnas
+Con este codigo consegimos que sea responsive la pagina, explicar*************
+<div class="col-xs-12 col-sm-7 col-md-8"> xs-movil  sm-tablet  md-ordenador     (12 es el ancho de la pantalla)
+Como podeis ver en la segunda columna hemos puesto un video 
+
+En la segunda fila primera columna, tenemos un formulario en el que hemos usado las clases por defecto q tiene Bootstrap asi como la validacion y el control de errores, tambien definimos los tipos de formularios: correo...
+En la segunda columna de la segunda fila: mediate clases predefinidas de Bootstrap hemos creado el carusel de modo que tenemos los indicadores las imagenes y los controles de desplazamiento. 
+Con dichas clases predefinidas ya se establece las transiciones de las imagenes.
+
+
+
+	/////////////// HELADERIA ///////////////
+
+Es evidente que esta pagina no guarda relacion con la tematica de la web, se realizo como un trabajo complementario pero quedamos tan satisfecho con el resultado que decidimos incluirlo en el trabajo final.
+
+Heladeria:
+Segimos el mismo diseño y estructura.
+En la primera seccion del nucleo tenemos unos parrafos centrados que tratan sobre equipo de trabajo y experiencia, le sigue un carusel.
+Segunda fila o seccion: tenemos efectos cuadrados 
+--mostrar y ver codigo--
+Se ha realizado mediante div y clases, cada clase contiene unos estilos gracias a los cuales se hace cuadrado, se consigue la transicion a ver receta(cuando pasas por encima el raton), pestaña azul, tambien se insertan las imagenes mediante clases .ch-img-1....
+A continuacion tenemos un parrafo dedicado a los locos por los helados con un video no apto para diabiticos
+
+	/////////////// MUSEO INTERACTIVO ///////////////
+
+Museo interactivo:
+Sigue el mismo diseño y extructura, dos filas con dos columnas en el cuerpo principal
+es fundamental importar la libreria de angular asi como algunos efectos.
+La pagina consiste en la interaccion con el usuario, esto lo logramos con diferentes imput y botones, utilizando javaScrip y angulajs. 
+
+En la primera fila: 
+Tenemos un selector con diferentes opciones
+--mostrar e ir al codigo--
+cuando elegimos una opcion mediante el evento onchange=(lamamos a la funcion)"miFuncion()".
+recogemos el valor de la opcion y mediante varios if buscamos la opcion elegida y cargaremos en unos parrafos el contenido q mostramos segun sea el pez
+
+Seguimos con un selector de cambio de color del parrafo: usamos tambien el evento on change y recogemos el value de la opcion, una vez recaogida, a la variabvle de los parrafos le asignamos el color mediante p.stile.color = opcion (opcion es el value)
+
+En la segunda columna: 
+Podemos encontrar unos botones de imagenes.
+--si nos vamos al codigo podemos apreciar que usando el evento onclick llamamos a la funcion mostrar, esta lo q hace es cargar una variable a la id de la imagen y
+la muestra, con los && (aspersan) podemos ocultar las demas imagenes, de manera q en cada boton segun clickeamos mostrara u ocultara las imagenes.
+
+Segunda fila primera columna:
+--mostramos efecto y vamos al codigo
+mediante angularJS declaramos una app ng-animate y lo q hacemos es enlazar el imput checkbox mediante el ng-model con el
+ ng-hide="esconderDiv" con este ocultamos la informacion.
+Hacemos un formulario en el q declaramos varias etiquetas imput q enlazamos con el ng-model y a su vez le asignamos un value.
+Luego creamos un ng-switch q se enlaza con los imputs y hacemos el ng-switch-when="pez..", segun sea el value. en funcion de la opcion elegida del imput se le compara el value y se muestra la informacion que hay dentro del div
+
+Segunda fila segunda columna:
+usando el selector y un evento onchange llamamos a la funcion colorChangue.en la funcion creamos una variable q es el valor de la opcion elegida, por ultimo aplicamos el color de dicha variable mediante body.style.backgroundColor
+
+Aumentar disminuir tamaño. usando los botones y el evento onclick llamamos a la funcion aumenta o disminuir. lo q hacemos es cargar en una variable todas las etiquetas p. luego devolvemos el tamaño y llamamos a la funcion getElementFontSize q nos devuelve el tamaño de los parrafos. y por ultimo aumentammos o disminuimos los pixeles y se lo aplicamos con element.style.fontSize
+
+
+xml
+podemos importar y mostrar un archivo xml alojado en el servidor.
+con el otro boton podemos descargarlo
+En la carpeta xml tenemos nuestro archivo fichaPez s.l q es donde tenemos la informacion q mostramos en la pagina
+
+lo primero q hacemos es cargar la ficha del pez en ajax, para elllo creamos un objetos XMLHttpRequest (es reconocido por casi todos los navegadores actuales)
+despues realizamos una serie de comprobaciones e cambio de estado y peticiones(q cumpla la condicion del if)
+luego usamo el get para obtener los datos e incluimos el enlace donde se encuentra nuestro archivos xml y posteriorment enviamos
+Cargamos los datos mediante el nodo raiz de nuestro archivo (acuario), en esa variable var x  se fuardara todos los nodos y datos.
+iteramos en bucle hasta la ultima posicion del nodo raiz y en una variable table vamos guardando los nodos q queremos mostrar mendiante el getElementsByTagName.
+finalmente cargamos en demo (la tabla) la variable table
+tambien tenemos un boton para esconder, creamos una variable vacia q cargamos a demo
+un boton para exportar (descargar) la tabla 
+
+tenemos un carusel sin controles, cambia solo, acompañado de un texto y un video de arrecifes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
